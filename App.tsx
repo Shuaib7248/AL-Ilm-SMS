@@ -22,6 +22,7 @@ import { MOCK_STUDENTS } from './constants';
 import { UserRole, Language } from './types';
 import { Bell, Search, Menu, Globe, ChevronRight } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const AppContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -173,6 +174,7 @@ const App: React.FC = () => {
   return (
     <LanguageProvider>
       <AppContent />
+      <SpeedInsights />
     </LanguageProvider>
   );
 };
